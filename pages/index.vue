@@ -2,18 +2,18 @@
   <div>
 
     <div class="preload flex center middle">
-      <noscript><img src="wp-content\themes\skinlux\assets\img\header\logo_preload.svg" alt=""></noscript>
+      <noscript><img src="css\img\header\logo_preload.svg" alt=""></noscript>
       <img class="lazyload"
            src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
-           data-src="wp-content\themes\skinlux\assets\img\header\logo_preload.svg" alt=""></div>
+           data-src="css\img\header\logo_preload.svg" alt=""></div>
 
       <header class="header">
         <div class="header__row">
           <div class="header__container container flex middle"><a class="header__logo" href="index.htm">
-            <noscript><img src="~/assets/uploads/2019/12/logo.svg" alt="Logo"></noscript>
+            <noscript><img src="uploads/2019/12/mylogo.png" alt="Logo"></noscript>
             <img class="lazyload"
-                 src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
-                 data-src="~/assets/uploads/2019/12/logo.svg" alt="Logo"></a>
+                 src='uploads/2019/12/mylogo.png'
+                 data-src="uploads/2019/12/mylogo.png" alt="Logo"></a>
             <nav class="header__nav flex middle" id="header__nav">
               <ul id="menu-menyu-v-shapke" class="header__menu flex middle">
                 <!--
@@ -46,9 +46,10 @@
       <div class="main mouse">
         <div class="mouse__light"></div>
         <div class="main__img">
-          <div class="lazyload main__img_item" id="myBack"
-
+          <div class="lazyload main__img_item"
+               style="background-image: url(css/img/permanent_0300.jpg);"
                ></div>
+
         </div>
         <div class="main__list">
           <div class="main__list_item">
@@ -61,12 +62,12 @@
           </div>
         </div>
         <div class="main__controls controls flex middle">
-          <noscript><img class="controls__prev" src="wp-content\themes\skinlux\assets\img\main\prev.svg" alt="">
+          <noscript><img class="controls__prev" src="css\img\main\prev.svg" alt="">
           </noscript>
           <img class="lazyload controls__prev"
                src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
                data-src="https://skinlux.by/wp-content/themes/skinlux/assets/img/main/prev.svg" alt="">
-          <noscript><img class="controls__next" src="wp-content\themes\skinlux\assets\img\main\next.svg" alt="">
+          <noscript><img class="controls__next" src="css\img\main\next.svg" alt="">
           </noscript>
           <img class="lazyload controls__next"
                src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
@@ -96,12 +97,12 @@
               </a></div>
             </div>
             <div class="slider__controls flex middle">
-              <noscript><img class="slider__prev" src="wp-content\themes\skinlux\assets\img\main\prev.svg" alt="">
+              <noscript><img class="slider__prev" src="css\img\main\prev.svg" alt="">
               </noscript>
               <img class="lazyload slider__prev"
                    src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
                    data-src="https://skinlux.by/wp-content/themes/skinlux/assets/img/main/prev.svg" alt="">
-              <noscript><img class="slider__next" src="wp-content\themes\skinlux\assets\img\main\next.svg" alt="">
+              <noscript><img class="slider__next" src="css\img\main\next.svg" alt="">
               </noscript>
               <img class="lazyload slider__next"
                    src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
@@ -213,14 +214,14 @@
           </div>
           <!--
           <div class="our_equipment__controls controls flex middle">
-            <noscript><img class="controls__prev" src="wp-content\themes\skinlux\assets\img\main\prev.svg" alt="">
+            <noscript><img class="controls__prev" src="css\img\main\prev.svg" alt="">
             </noscript>
             <img class="lazyload controls__prev"
                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
                  data-src="https://skinlux.by/wp-content/themes/skinlux/assets/img/main/prev.svg" alt="">
             <p class="controls__current">00</p> <span>/</span>
             <p class="controls__count">00</p>
-            <noscript><img class="controls__next" src="wp-content\themes\skinlux\assets\img\main\next.svg" alt="">
+            <noscript><img class="controls__next" src="css\img\main\next.svg" alt="">
             </noscript>
             <img class="lazyload controls__next"
                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
@@ -284,12 +285,12 @@
               </div>
             </div>
             <div class="slider__controls flex middle">
-              <noscript><img class="slider__prev" src="wp-content\themes\skinlux\assets\img\main\prev.svg" alt="">
+              <noscript><img class="slider__prev" src="css\img\main\prev.svg" alt="">
               </noscript>
               <img class="lazyload slider__prev"
                    src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
                    data-src="https://skinlux.by/wp-content/themes/skinlux/assets/img/main/prev.svg" alt="">
-              <noscript><img class="slider__next" src="wp-content\themes\skinlux\assets\img\main\next.svg" alt="">
+              <noscript><img class="slider__next" src="css\img\main\next.svg" alt="">
               </noscript>
               <img class="lazyload slider__next"
                    src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
@@ -559,13 +560,6 @@
         <p class="modal__text">Мы свяжемся с вами в ближайшее время и уточним дату и время приема, а так-же детали. <br>А
           пока
           вы можете <a href="blog\index.htm">почитать наш блог</a>.</p></div>
-      <noscript>
-        <style>.lazyload {
-          display: none;
-        }</style>
-      </noscript>
-
-
 
     <!-- Dynamic page generated in 0.522 seconds. -->
     <!-- Cached page generated by WP-Super-Cache on 2020-10-19 09:00:36 -->
