@@ -1,14 +1,12 @@
 
 export default {
   /*
-  ** Nuxt rendering mode
-  ** See https://nuxtjs.org/api/configuration-mode
-  */
-  mode: 'universal',
-  /*
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
   */
+  serverMiddleware: [
+    {path: '/api', handler: '~/server/index.js'}
+  ],
   target: 'server',
   /*
   ** Headers of the page
@@ -28,11 +26,15 @@ export default {
       {src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js', ssr: false}
     ]
   },
+  server: {
+    port: 8080,
+    host: 'localhost'
+  },
   /*
   ** Global CSS
   */
   css: [
-    {src:'@/static/css/index.css', lang: 'css', ssr: false},
+  //  {src:'@/static/css/index.css', lang: 'css', ssr: false},
   //  '@/static/css/myindex.css'
   ],
   /*

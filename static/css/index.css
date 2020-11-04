@@ -5399,7 +5399,7 @@ h4 {
 }
 
 .header__logo {
-  width: 253px
+  width: 158px
 }
 
 .header__nav {
@@ -5807,7 +5807,6 @@ h4 {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../../assets/img/Permanent_0300.jpg);
 }
 
 .main__list {
@@ -7943,11 +7942,11 @@ figure.wp-block-image figcaption {
   }
 
   .header__row {
-    padding: 25px 0
+    padding-bottom: 25px;
   }
 
   .header__row.small {
-    padding: 20px 0
+    padding-bottom: 20px
   }
 
   .header__logo {

@@ -6,7 +6,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.0",
@@ -14,9 +15,14 @@
     "bootstrap-vue": "^2.15.0",
     "jquery": "^3.5.1",
     "lazysizes": "^5.2.2",
-    "nuxt": "^2.14.0"
+    "nuxt": "^2.14.0",
+    "backpack-core": "^0.7.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0",
+    "morgan": "^1.9.1"
   },
   "devDependencies": {
-    "file-loader": "^6.1.1"
+    "file-loader": "^6.2.0"
   }
 }

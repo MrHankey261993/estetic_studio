@@ -1,8 +1,23 @@
 <template>
   <div>
-    <Nuxt />
+
+    <test/>
+
+      <Nuxt />
+    <foot></foot>
+
   </div>
 </template>
+
+<script>
+  import test from "~/components/main/header";
+  import foot from "~/components/main/footer";
+
+  export default {
+    name: 'Default',
+    components: {foot, test}
+  }
+</script>
 
 <style>
 html {
@@ -15,7 +30,7 @@ html {
     'Helvetica Neue',
     Arial,
     sans-serif;
-  font-size: 16px;
+  font-size: 22px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
