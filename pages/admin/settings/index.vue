@@ -13,7 +13,7 @@
           <div class="card" style="width: 100%;">
             <div class="card-body">
               <h5 class="card-subtitle mb-2 text-muted">Категории</h5>
-              <button type="button" class="btn btn-outline-primary" style="font-size: 16px">Добавить категорию</button>
+              <button type="button" class="btn btn-outline-primary" style="font-size: 16px" @click="test">Добавить категорию</button>
               <br>
               <table class="table mt-2">
                 <thead>
@@ -54,7 +54,20 @@
 <script>
 export default {
   name: "index",
-  layout: 'admin'
+  layout: 'admin',
+  async asyncData({$axios}) {
+
+  },
+  methods: {
+  async test() {
+      const formData = new FormData
+      formData.append("test", 12346541);
+      const test = await this.$axios.post('http://127.0.0.1:3000/api/categories/', formData)
+      return {
+        test: test.data
+      }
+    }
+  }
 }
 </script>
 

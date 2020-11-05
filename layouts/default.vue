@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <test/>
+
 
       <Nuxt />
     <foot></foot>
@@ -10,12 +10,14 @@
 </template>
 
 <script>
-  import test from "~/components/main/header";
+//  import test from "~/components/main/header";
   import foot from "~/components/main/footer";
 
   export default {
     name: 'Default',
-    components: {foot, test}
+    components: {foot,
+     // test
+    }
   }
 </script>
 

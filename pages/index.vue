@@ -180,10 +180,7 @@
 
   export default {
     async asyncData({$axios}) {
-      const test = await $axios.get('http://localhost:3000/api/users')
-      return {
-        test: test.data
-      }
+
     },
     components: {
       mainSection,
