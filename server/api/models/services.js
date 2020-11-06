@@ -3,13 +3,30 @@ import dbconfig  from "../../config/database";
 
 
 
-let categoryModel = {};
+let servicesModel = {};
 
-categoryModel.getAllCategories= (callback) => {
+servicesModel.getAllServices= (callback) => {
   const conn = mysql.createConnection(dbconfig.connection);//CREAMOS LA CONECCION
   if (conn) {
+    conn.query('SELECT s.id, s.name_service, ps.id as id_cat, ps.name_categories FROM services s LEFT JOIN categories ps ON s.id_category = ps.id ORDER BY s.id',
+      (err, rows) => {
+        if (err) {
+          console.log(err)
+          throw err
+        }
+        else {
+          callback(null, rows);
+          conn.end()
+        }
+      }
+    )
+  }
+}
 
-    conn.query('SELECT * FROM categories ORDER BY id',
+servicesModel.getServiceById = (id, callback) => {
+  const conn = mysql.createConnection(dbconfig.connection);//CREAMOS LA CONECCION
+  if (conn) {
+    conn.query('SELECT * FROM services where id='+id,
       (err, rows) => {
         if (err) {
           throw err
@@ -23,35 +40,20 @@ categoryModel.getAllCategories= (callback) => {
   }
 }
 
-categoryModel.getCategoryById = (id, callback) => {
+servicesModel.addServices = (data, callback) => {
   const conn = mysql.createConnection(dbconfig.connection);//CREAMOS LA CONECCION
   if (conn) {
-    conn.query('SELECT * FROM categories where id='+id,
+    let dat = {
+      id_category: data.id,
+      name: data.name
+    }
+    conn.query('INSERT INTO services(id_category ,name) VALUES ("' + dat.id_category, dat.name + '")',
       (err, rows) => {
         if (err) {
           throw err
         }
         else {
-          callback(null, rows);
-          conn.end()
-        }
-      }
-    )
-  }
-}
-
-categoryModel.addCategory = (data, callback) => {
-  const conn = mysql.createConnection(dbconfig.connection);//CREAMOS LA CONECCION
-  if (conn) {
-
-    conn.query('INSERT INTO categories(name) VALUES ("' + data + '")',
-      (err, rows) => {
-        if (err) {
-
-          throw err
-        }
-        else {
-          categoryModel.getCategoryById(rows.insertId, (error, data) => {
+          servicesModel.getServiceById(rows.insertId, (error, data) => {
             callback(null, data);
           })
           conn.end()
@@ -63,4 +65,4 @@ categoryModel.addCategory = (data, callback) => {
 
 
 
-export default categoryModel
+export default servicesModel

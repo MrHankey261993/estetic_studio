@@ -179,9 +179,6 @@
   import sectionContacts from '~/components/main/sectionContacts'
 
   export default {
-    async asyncData({$axios}) {
-
-    },
     components: {
       mainSection,
       sectionYourServic,
