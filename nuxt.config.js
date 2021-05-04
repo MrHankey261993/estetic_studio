@@ -8,6 +8,10 @@ export default {
     {path: '/api', handler: '~/server/index.js'}
   ],
   target: 'server',
+  server: {
+    host: '127.0.0.1',
+    port: 8080
+  },
   /*
   ** Headers of the page
   ** See https://nuxtjs.org/api/configuration-head
@@ -26,10 +30,6 @@ export default {
       {src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js', ssr: false}
     ]
   },
-  server: {
-    port: 8080,
-    host: 'localhost'
-  },
   /*
   ** Global CSS
   */
@@ -43,7 +43,7 @@ export default {
   */
   plugins: [
     {src: '@/plugins/autoptimize_7f60858fff2d78c24e393e0bcc55a31a.js', ssr: false},
-    {src: '@/plugins/lazysizes.min.js', ssr: false}
+    {src: '@/plugins/lazysizes.min.js', ssr: false},
   ],
   /*
   ** Auto import components
@@ -60,7 +60,7 @@ export default {
   */
   modules: [
     // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt',
+ //     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
   ],

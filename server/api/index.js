@@ -1,11 +1,14 @@
 import { Router } from 'express'
 
 import users from './controllers/users/users'
-import ticket from './controllers/ticket/ticket'
+import categories from './controllers/categories/categories'
+import services from './controllers/services/services'
+
 const router = Router()
 
 // Add USERS Routes
 router.use(users)
-router.use(ticket)
+router.use(categories)
+router.use(services)
 
 export default router
