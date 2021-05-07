@@ -4,9 +4,9 @@
 
     <div
       class="lazyload main_service"
-      data-bg="https://skinlux.by/wp-content/uploads/2020/01/fon-16-1920x1000.jpg"
-      style="
-        background-image: url(data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20500%20300%22%3E%3C/svg%3E);
+
+      :style="
+        'background-image: url('+post.img+')'
       "
     >
       <div class="container">

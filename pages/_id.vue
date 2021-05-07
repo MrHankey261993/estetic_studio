@@ -1,14 +1,10 @@
 <template>
   <div>
-    <div class="preload flex center middle">
-      <img class="lazyload"
-           src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
-           data-src="css\img\header\logo_preload.svg" alt="">
-    </div>
+
     <!-- Шапка на главной странице -->
     <main-section/>
 
-    
+
   </div>
 
 </template>
@@ -24,12 +20,7 @@
   import sectionContacts from '~/components/main/sectionContacts'
 
   export default {
-    async asyncData({$axios}) {
-      const test = await $axios.get('http://localhost:3000/api/users')
-      return {
-        test: test.data
-      }
-    },
+
     components: {
       mainSection,
       sectionYourServic,
