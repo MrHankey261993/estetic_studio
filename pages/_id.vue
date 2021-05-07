@@ -2,7 +2,7 @@
   <div>
 
     <!-- Шапка на главной странице -->
-    <main-section/>
+    <main-section :post="post"/>
 
 
   </div>
@@ -20,7 +20,22 @@
   import sectionContacts from '~/components/main/sectionContacts'
 
   export default {
-
+    async created() {
+      this.post = await this.$store.getters["data/getPostByName"](
+        this.$route.path
+      );
+      if (typeof this.post === "undefined") {
+        this.$router.push("/");
+      }
+    },
+    data() {
+      return {
+        post: {},
+      };
+    },
+    title () {
+      return this.posts.mainTitle
+    },
     components: {
       mainSection,
       sectionYourServic,

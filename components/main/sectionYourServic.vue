@@ -35,7 +35,8 @@
     },
     created() {
       this.posts = this.$store.getters['data/getPosts'];
-    }
+    },
+
   }
 </script>
 

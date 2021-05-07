@@ -73,19 +73,7 @@
 import BtnsGroup from "./btnsGroup.vue";
 export default {
   name: "sectionMainId",
-  async created() {
-    this.post = await this.$store.getters["data/getPostByName"](
-      this.$route.path
-    );
-    if (typeof this.post === "undefined") {
-      this.$router.push("/");
-    }
-  },
-  data() {
-    return {
-      post: {},
-    };
-  },
+  props: ['post'],
   components: {
     BtnsGroup,
   },
