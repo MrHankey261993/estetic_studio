@@ -75,7 +75,7 @@ export default {
   name: "sectionMainId",
   async created() {
     this.post = await this.$store.getters["data/getPostByName"](
-      this.$route.path
+      this.$route.params.id
     );
     if (typeof this.post === "undefined") {
       this.$router.push("/");
